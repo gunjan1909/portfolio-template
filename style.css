@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Source+Code+Pro&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* body {
+  overflow-x: hidden;
+  background: linear-gradient(
+    135deg,
+    rgba(26, 188, 156, 1) 0%,
+    rgba(142, 68, 173, 1) 100%
+  );
+} */
+
+/* blue color palette variables*/
+:root {
+  --blue: #19a7ce;
+  --blue-light: #62cdff;
+  --blue-dark: #1f4e78;
+  --blue-darker: #1a3f63;
+  --blue-darkest: #0f2a3f;
+  --blue-lighter: #5c8ac4;
+  --blue-lightest: #7da8d9;
+  --blue-lightest-2: #a7c9e8;
+  --blue-lightest-3: #d1e8f6;
+  --blue-lightest-4: #ecf2ff;
+  --blue-lightest-5: #f7fafd;
+  --white: #fff;
+  --black: #000;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--blue-lightest-2);
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--blue-darker);
+  border-radius: 1px;
+  transition: all 0.5s ease-in-out;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-darkest);
+}
+/* SCROLLBAR END */
+
+.flex {
+  display: flex;
+}
+
+.banner {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  padding: 6.25rem;
+  background: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.banner.night {
+  background: var(--blue-darkest);
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  width: 10rem;
+  height: 10rem;
+  background: url(./assets/dotted.png);
+  background-size: cover;
+  animation-name: floating2;
+  animation-duration: 3s;
+  animation-delay: -5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+header.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.25rem 6.25rem;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  z-index: 1000;
+}
+
+header .logo {
+  color: var(--blue-darkest);
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+
+header .logo span {
+  color: var(--blue);
+}
+
+header ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+header ul li {
+  list-style-type: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--blue-dark);
+  transition: all 0.5s ease-in-out;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+header ul li a:hover {
+  background-color: var(--blue-darker);
+  color: var(--blue-light);
+}
+
+.content {
+  position: relative;
+  max-width: 45vw;
+  /* word-wrap: break-word; */
+  z-index: 10;
+}
+
+.content h3 {
+  font-size: 2rem;
+  color: var(--blue-darker);
+  font-weight: 300;
+  transition: all 0.5s ease-in-out;
+}
+
+.content h2 {
+  font-size: 4rem;
+  color: var(--blue-darker);
+  font-weight: 700;
+  transition: all 0.5s ease-in-out;
+}
+
+.content h2 span#text {
+  color: var(--blue);
+  transition: all 0.5s ease-in-out;
+}
+
+.content p {
+  font-size: 1.1rem;
+  color: var(--blue-lighter);
+  margin: 1rem 0;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+}
+
+.content a.btn-a {
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  transition: all 0.5s ease-in-out;
+}
+
+.content a button {
+  position: relative;
+  background: var(--blue-light);
+  color: var(--white);
+  border: none;
+  outline: none;
+  padding: 1rem 2rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  scale: 0.95;
+  border: 2px solid var(--blue-light);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  /* optional */
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+/* optional */
+@keyframes floating {
+  0%,
+  100% {
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.4);
+    transform: translatey(0px);
+  }
+  50% {
+    box-shadow: 0 20px 15px 0px rgba(0, 0, 0, 0.2);
+    transform: translatey(-5px);
+  }
+}
+@keyframes floating2 {
+  0%,
+  100% {
+    transform: translatey(0px);
+  }
+  50% {
+    transform: translatey(-10px);
+  }
+}
+@keyframes floating3 {
+  0%,
+  100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+.content a:hover button {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+  scale: 1;
+}
+
+.content a button.contact {
+  background: transparent;
+  color: var(--blue-dark);
+  border: 2px solid var(--blue-dark);
+}
+
+.content a:hover button.contact {
+  background: var(--blue-dark);
+  color: var(--white);
+}
+
+.content a button ion-icon {
+  margin: auto;
+  font-size: 1.25rem;
+}
+
+ul.sci {
+  position: absolute;
+  bottom: 2rem;
+  display: flex;
+  gap: 1.25rem;
+}
+
+ul.sci li {
+  list-style: none;
+}
+
+ul.sci li a {
+  text-decoration: none;
+  color: var(--blue-dark);
+  font-size: 1.75rem;
+  transition: all 0.5s ease-in-out;
+}
+
+ul.sci li a:hover {
+  color: var(--blue-darkest);
+}
+
+.daynight {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background: var(--blue-lightest-4);
+  color: var(--blue-lighter);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.5s all ease-in-out;
+  font-size: 2rem;
+}
+
+.daynight ion-icon:nth-child(2),
+.banner.night .daynight ion-icon:nth-child(1) {
+  display: none;
+}
+
+.banner.night .daynight ion-icon:nth-child(2) {
+  display: block;
+}
+
+.banner.night .daynight {
+  background: var(--blue-darker);
+}
+
+.banner.night header.header .logo {
+  color: var(--blue-lightest-2);
+}
+
+.banner.night header.header ul li a {
+  color: var(--blue);
+  border: 1px solid var(--blue);
+}
+
+.banner.night header.header ul li a:hover {
+  background-color: var(--blue);
+  color: var(--blue-darkest);
+}
+
+.banner.night .content h3 {
+  color: var(--blue-light);
+}
+
+.banner.night .content h2 {
+  color: var(--blue-light);
+}
+
+.banner.night .content h2 span#text {
+  color: var(--blue-lightest-4);
+}
+
+.banner.night .content p {
+  color: var(--blue-light);
+}
+
+.banner.night .content a button {
+  background: var(--blue-dark);
+  border-color: var(--blue-dark);
+}
+
+.banner.night .content a button.contact {
+  background: transparent;
+  color: var(--blue-lightest-4);
+  border: 2px solid var(--blue-dark);
+}
+
+.banner.night .content a:hover button.contact {
+  background: var(--blue-dark);
+  color: var(--white);
+}
+
+.banner.night .content a:hover button {
+  background: var(--blue-darker);
+  border-color: var(--blue-darker);
+}
+
+.banner.night ul.sci li a {
+  color: var(--blue-lightest-2);
+}
+
+.banner.night ul.sci li a:hover {
+  color: var(--blue-lightest-4);
+}
+
+img.colors {
+  position: absolute;
+  right: 0;
+  max-width: 45vw;
+
+  animation-name: floating2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+img.man {
+  position: absolute;
+  right: 10vw;
+  bottom: 1vh;
+  max-height: 90vh;
+  animation-name: floating3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
