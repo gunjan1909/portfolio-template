@@ -17,7 +17,7 @@ let typingText = new Typed("#text", {
   backDelay: 1000,
 });
 let typingText2 = new Typed("#text2", {
-  strings: ["Gunjan", "WebDev", "Coding", "Marvel Fan", "Music Addict"],
+  strings: ["Gunjan", "WebDeveloper", "Coder", "Marvel Fan", "Music Addict"],
   loop: true,
   typeSpeed: 100,
   backSpeed: 50,

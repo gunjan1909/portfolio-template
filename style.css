@@ -7,15 +7,6 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* body {
-  overflow-x: hidden;
-  background: linear-gradient(
-    135deg,
-    rgba(26, 188, 156, 1) 0%,
-    rgba(142, 68, 173, 1) 100%
-  );
-} */
-
 /* blue color palette variables*/
 :root {
   --blue: #19a7ce;
@@ -34,25 +25,31 @@
 }
 
 /* SCROLLBAR */
+
 /* width */
 ::-webkit-scrollbar {
   width: 0.5rem;
 }
+
 /* Track */
 ::-webkit-scrollbar-track {
   background-color: var(--blue-lightest-2);
 }
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--blue-darker);
   border-radius: 1px;
   transition: all 0.5s ease-in-out;
 }
+
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: var(--blue-darkest);
 }
+
 /* SCROLLBAR END */
+
 
 .flex {
   display: flex;
@@ -206,30 +203,38 @@ header ul li a:hover {
 
 /* optional */
 @keyframes floating {
+
   0%,
   100% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.4);
     transform: translatey(0px);
   }
+
   50% {
     box-shadow: 0 20px 15px 0px rgba(0, 0, 0, 0.2);
     transform: translatey(-5px);
   }
 }
+
 @keyframes floating2 {
+
   0%,
   100% {
     transform: translatey(0px);
   }
+
   50% {
     transform: translatey(-10px);
   }
 }
+
 @keyframes floating3 {
+
   0%,
   100% {
     transform: translateX(0px);
   }
+
   50% {
     transform: translateX(-5px);
   }
